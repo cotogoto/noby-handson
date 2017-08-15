@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<title>ノビィと会話</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+  function send() {
+
+    $.get('https://www.cotogoto.ai/webapi/noby.json',
+      {
+        appkey: 'YOUR_API_KEY',
+        text: $('#message').val()
+      },
+      function(data) {
+        $('#reply').html(data.text)
+      }
+    );
+  }
+</script>
+</head>
+<body>
+<div>
+  <label for="message">話す：</label><br>
+  <textarea id="message"></textarea>
+</div>
+<input type="button" value="送信" onclick="send()">
+<div id="reply"></div>
+</body>
+</html>
