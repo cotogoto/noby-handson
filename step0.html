@@ -3,18 +3,7 @@
 <title>ノビィと会話</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>
-  function send() {
 
-    $.get('https://www.cotogoto.ai/webapi/noby.json',
-      {
-        appkey: 'c8d6163c75bcc8f75b873b947e62577a',
-        text: $('#message').val()
-      },
-      function(data) {
-        $('#reply').html(data.text)
-      }
-    );
-  }
 </script>
 </head>
 <body>
